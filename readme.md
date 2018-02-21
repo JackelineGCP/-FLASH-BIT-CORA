@@ -1,11 +1,11 @@
 # BITÁCORA
 
-
 ## Descripción
 
 El reto de este proyecto consiste en crear una bitácora, donde el usuario pueda añadir texto, imagen, audio y video. 
 
 ## Herramientas utilizadas 
+
  1. **HTML 5** : Estructura de la página.
  2. **JQUERY** : Lenguaje de programación.
  3. **File API** : APIs.

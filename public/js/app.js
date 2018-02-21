@@ -42,7 +42,7 @@ $('input[type=file]').change(function () {
   reader.readAsDataURL(this.files[0]);
 });
 
-// function for image
+// function for post image
 function image() {
   let imagen = $("#saveimg");
 
@@ -55,3 +55,28 @@ function image() {
 }
 
 $('#send').on('click', image);
+
+
+//Function for post audio and video
+
+document.getElementById('fileAv').onchange = function(evt) {
+  var files = evt.target.files; 
+  console.log(files);
+  for (var i = 0, f; f = files[i]; i++) {
+    if (!f.type.match('video.*')) {
+      continue;
+    }
+        var reader = new FileReader();
+        reader.onload = (function(theFile) {
+          return function(e) {
+            var paragraph = document.createElement('div');
+            paragraph.innerHTML = [`<video src=${e.target.result} controls></video>', 
+                              '" title="', escape(theFile.name), '"/>`].join('');
+            document.getElementById('list').insertBefore(paragraph, null);
+          };
+        })(f);
+        reader.readAsDataURL(f);
+      } 
+  
+  
+}

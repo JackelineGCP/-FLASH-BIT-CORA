@@ -23,27 +23,84 @@
     </a>
     <ul>
       <li>
-        <a class="btn-floating red">
+        <a class="btn-floating red waves-effect waves-light modal-trigger" href="#modal1">
           <i class="material-icons modal-trigger" href="#modal1">message</i>
         </a>
       </li>
       <li>
-        <a class="btn-floating green">
+        <a class="btn-floating green waves-effect waves-light modal-trigger" href="#modal2">
           <i class="material-icons">video_library</i>
         </a>
       </li>
       <li>
-        <a class="btn-floating yellow darken-1">
+        <a class="btn-floating yellow darken-1 waves-effect waves-light modal-trigger" href="#modal3">
           <i class="material-icons">perm_contact_calendar</i>
         </a>
       </li>
       <li>
-        <a class="btn-floating purple">
+        <a class="btn-floating purple waves-effect waves-light modal-trigger" href="#modal4">
           <i class="material-icons">collections</i>
         </a>
       </li>
     </ul>
   </div>
+
+
+  <!-- contenedor que mostrará los post -->
+  <div class="container">
+    <div class="row">
+      <div class="col l12">
+        <div class="post" id="post">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- estructura del modal de posteo -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col offset-l4 posteando">
+          <input type="text" name="text" value="" placeholder="Title" class="posteando" autofocus>
+        </div>
+      </div>
+      <textarea name="text" id="texto" class="area-height" placeholder="¿Qué te gustaría postear?" type="text"></textarea>
+      <hr>
+    </div>
+    <div class="modal-footer">
+      <a id="post-text" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat teal darken-1 white-text">
+        <i class="material-icons right">Enviar</i>Publicar</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure IMAGE-->
+  <div id="modal2" class="modal">
+    <div class="modal-content modal-photo">
+      <div class="center">
+        <h4>Selecciona la imagen</h4>
+      </div>
+      <form action="#">
+        <div class="file-field input-field">
+          <div class="btn light-green">
+            <input id="file-select" type="file" multiple>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Change your photo">
+          </div>
+        </div>
+      </form>
+      <figure class="center">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzEiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg1LjUiIHk9IjkwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MTcxeDE4MDwvdGV4dD48L3N2Zz4="
+          alt="" id="saveimg" class="responsive-img post-img">
+      </figure>
+      <div class="right ">
+        <a id="send" class="modal-action modal-close waves-effect waves-green btn-flat green white-text">
+          <i class="material-icons right">Enviar</i>Publicar</a>
+      </div>
+    </div>
+  </div>
+
 
 
   <!-- Compiled and minified JavaScript -->
